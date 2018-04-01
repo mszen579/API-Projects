@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+   <head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initisl-scale=1">
+		<title>Little Village</title>
+		
+	   
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--Import materialize.css-->
+	<link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+	   <link rel="shortcut icon" href="childcare%20logo.png" type="image/x-icon" /> <!--allocate icon for your website-->
+	    <link rel="stylesheet" type="text/css" href="style.css">
+	   
+	   <script type="text/javascript" src="childcare.js"></script> <!--the link to my APIs file-->
+	   
+ </head>
+       <body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+
+<script> 
+$(document).ready(function(){
+    $("#flip").click(function(){
+        $("#panel").slideDown("slow");
+		$("#panel").slideUp(10000);
+    }); //this JQ for sliding down menu
+	
+	$(document).ready(function() {2
+  $('img').each(function ()
+  {var currentImage = $(this);
+     currentImage.wrap("<a href='" + currentImage.attr("src") + "' </a>");
+  }); //this JQ to enlarge images
+});
+
+});
+	
+	
+</script> <!--This link for materialized code-->
+		   
+
+		   
+		   <div id="backgound">
+			   
+		<nav>
+			<div class="nav-wrapper" style="background-color: #b4a4b8">
+				<a href="#" class="brand-logo"><img id="logo" src="childcare%20logo.png" style="width:80px;border-radius: 30px;opacity: 0.7"></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+			
+				<li><a href="#">About Little Village</a></li>
+				<li><a href="#">Our Day Care</a></li>
+				<li><a href="#">Our Preschool</a></li>
+				<li><a href="#">Our After School</a></li>
+				<li><a href="#">Our Holiday Camp</a></li>
+				<li><a href="#">Locations</a></li>
+				<li><a href="#">Vacancies</a></li>	
+				</ul>
+			</div>
+		</nav>
+		<!--The below is for API Weather code-->	   
+				<script> 
+				var apiCall = 'http://api.openweathermap.org/data/2.5/weather?q=Rotterdam&appid=9e7ae9352c76a7de3c6fe107528497ca';
+
+				$.getJSON(apiCall, weatherCallback);
+
+				function weatherCallback(weatherData){
+				var cityName = weatherData.name;
+				var country = weatherData.sys.country;
+				var description = weatherData.weather[0].description;
+				$('.weatherResponse').append("The Weather in " + cityName + " " + country + " is currently " + "{" + description + "}");
+				}
+				</script>
+			   
+			   <div class="weatherResponse" style="text-align: center; font-size: 20px; color: darkgray">
+    
+    			</div>
+			   
+			     
+			<div id="dropdownjq"> 		<!--This code is for JQ dropdown menu-->	   
+
+				
+				<div id="flip">Look here for LITTLE VILLAGE next open days 'dates & Locations'&nbsp; &nbsp;<i class="fa fa-sort-amount-asc" style="font-size:24px"><!--Logo will be in here --></i></div> 
+				<div id="panel"> 
+					<span>20th March 2018 - Location: Den Haag Littel Village</span><br><br>
+					<span>23th March 2018 - Location: Rotterdam Littel Village</span><br><br>
+					<span>26th March 2018 - Location: Utrecht Littel Village</span><br><br>
+					<span>29th March 2018 - Location: Amsterdam Littel Village</span><br><br>
+				</div>
+			</div> 
+			   
+			 
+			   
+			 <div id="mainphotos">
+			
+
+				<img src="daycare.png" id="daycare"  alt="daycare">
+
+				 <img id="afterschoolcare" src="afterschoolcare.png" alt="afterschool">
+
+				 <img id="preschool" src="preschool.png" alt="preschool">
+
+				 <img id="holidaycamp" src="holidaycamp.png" alt="holidaycamp">
+			 
+			   </div>
+			  	
+			   
+		 <footer class="page-footer">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Contacts Us:</h5>
+				<p class="grey-text text-lighten-4">Lttel Village International Childcare Group
+				Head Office,
+				Jozef Israelsplein 36
+				2596 AV Rotterdam;
+				T:   +31 (0)70 326 8000,
+				E:   info@LttelVillagecc.nl</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Useful Links:</h5>
+                <ul>
+				  <li><a class="grey-text text-lighten-3" href="#!">Our Partners...</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Why choosing Little Village Childcare?</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Our Locations !</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Key Information</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Vaccancies</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2018 Copyright - Little Village Childcare Group!
+            <a class="grey-text text-lighten-4 right" href="#!">More Links...</a>
+            </div>
+          </div>
+        </footer>
+            
+			  
+			   
+		   </div>
+	   </body>
+ </html>
+
+

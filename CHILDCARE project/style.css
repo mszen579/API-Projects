@@ -1,0 +1,62 @@
+#backgound{
+	width: 100%;
+	height: 100%;
+	background-color: #f4eaf7;
+}
+
+
+
+
+#daycare{
+	width: 45% ;
+	height: 350px;
+	margin: 5px;
+	border-radius: 20px;
+	box-shadow: 3px 3px #CFC5BB; 
+}
+
+#afterschoolcare{
+	width: 45% ;
+	height: 350px;
+	margin: 5px;
+	border-radius: 20px;
+	box-shadow: 3px 3px #CFC5BB;
+}
+
+#preschool{
+	width: 45% ;
+	height: 350px;
+	margin: 5px;
+	border-radius: 20px;
+	box-shadow: 3px 3px #CFC5BB;
+}
+
+#holidaycamp{
+	width: 45% ;
+	height: 350px;
+	margin: 5px;
+	border-radius: 20px;
+	box-shadow: 3px 3px #CFC5BB;
+}
+
+
+#panel, #flip {
+    padding: 5px;
+    text-align: center;
+    background-color: #e5eecc;
+    border: solid 1px #c3c3c3;
+	color: #B4A4B8;
+	font-weight: 700;
+}
+
+
+#panel {
+    padding: 50px;
+    display: none;
+}
+
+#mainphotos{
+	width: 100%;
+	margin-left: 50px;
+}
+
